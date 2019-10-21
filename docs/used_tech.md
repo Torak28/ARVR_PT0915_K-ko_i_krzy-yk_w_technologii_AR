@@ -12,7 +12,7 @@ As a game engine
 
 As a AR platform
 
-![AR](https://media.giphy.com/media/26DMUyqFP2MYBu800/giphy.gif)
+![AR](https://media0.giphy.com/media/lvyao9Eutj8wE/giphy.gif?cid=790b76111d13ff3fadb0270cbb2eee5ba3adc0ec3b8cfd88&rid=giphy.gif)
 
 ### Android
 
