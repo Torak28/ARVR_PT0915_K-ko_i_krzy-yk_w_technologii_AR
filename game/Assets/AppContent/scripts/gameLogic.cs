@@ -150,11 +150,9 @@ public class gameLogic : MonoBehaviour
 			if (winPlayer || winComputer || equal) {
 				//if(Clicked == true)
 				//AirClick = GameObject.Find ("CodeContainer").GetComponent<ProgressBar> ().hitInfo.collider.name;
-
 				if (winPlayer) {
 					Debug.Log ("PLAYER WINS");
-			//		allContent.SetActive (true);
-			
+			        // allContent.SetActive (true);
 					// turn victory model/effects
 				}
 				if (winComputer) {
@@ -165,10 +163,7 @@ public class gameLogic : MonoBehaviour
 					Debug.Log ("EQUAL");
 					// turn victory model/effects
 				}
-			
 			}
-
-
 		}
 
 		if (Input.GetMouseButtonUp (0)) {
@@ -179,20 +174,17 @@ public class gameLogic : MonoBehaviour
 					replay ();
 			}
 		}
-
 	}
-
-
 
 	private void CreateCylinderBetweenPoints (Transform modelPlaces1, Transform modelPlaces2)
 	{
-		Vector3 pos = Vector3.Lerp (modelPlaces1.transform.position, modelPlaces2.transform.position, (float)0.5);
-		GameObject segObj = (GameObject)Instantiate (cylinderPrefab);
-		//segObj.transform.parent = GameObject.Find("ImageTarget").transform;
-		segObj.transform.position = pos;    
-		segObj.transform.localPosition = new Vector3 (pos.x, pos.y + 0.85f, pos.z);
-		segObj.transform.up = modelPlaces2.transform.position - modelPlaces1.transform.position;
-	}
+        Vector3 pos = Vector3.Lerp(modelPlaces1.transform.position, modelPlaces2.transform.position, (float)0.5);
+        GameObject segObj = (GameObject)Instantiate(cylinderPrefab);
+        segObj.transform.parent = GameObject.Find("ImageTarget").transform;
+        segObj.transform.position = new Vector3(pos.x, pos.y, pos.z - 0.85f);
+        //segObj.transform.localPosition = new Vector3(pos.x, pos.y + 0.85f, pos.z);
+        segObj.transform.up = modelPlaces2.transform.position - modelPlaces1.transform.position;
+    }
 
 	IEnumerator TimeDelay ()
 	{
