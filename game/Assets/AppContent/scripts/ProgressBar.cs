@@ -24,7 +24,7 @@ public class ProgressBar : MonoBehaviour {
 				
 		//Debug.Log ("hitTemp: " + hitTemp + "  hit.collider: " + hitInfo.collider);
 		if (hitTemp != null || hitInfo.collider != null) {
-			if (hitTemp == hitInfo.collider && clicked == false && (hitInfo.collider.name == "replayButton" || hitInfo.collider.name == "Plane1" || hitInfo.collider.name == "Plane2" || hitInfo.collider.name == "Plane3" || hitInfo.collider.name == "Plane4" || hitInfo.collider.name == "Plane5" || hitInfo.collider.name == "Plane6" || hitInfo.collider.name == "Plane7" || hitInfo.collider.name == "Plane8" || hitInfo.collider.name == "Plane9")) {
+			if (hitTemp == hitInfo.collider && clicked == false && (hitInfo.collider.name == "replayButton" || hitInfo.collider.name == "Plane1" || hitInfo.collider.name == "Plane2" || hitInfo.collider.name == "Plane3" || hitInfo.collider.name == "Plane4" || hitInfo.collider.name == "Plane5" || hitInfo.collider.name == "Plane6" || hitInfo.collider.name == "Plane7" || hitInfo.collider.name == "Plane8" || hitInfo.collider.name == "Plane9" || hitInfo.collider.name == "level")) {
 				if (currentAmount < 100) {
 					currentAmount += speed * Time.deltaTime;
 					TextIndicatorLeft.GetComponent<Text> ().text = ((int)currentAmount).ToString () + "%";
